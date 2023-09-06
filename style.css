@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Inter:wght@400;500&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(/assets/bg-mobile.jpg);
+    --border-color: rgba(255, 255, 255, 0.50);
+    --bg-stroke-color: rgba(255, 255, 255, 0.05);
+    --bg-stroke-color-hover: rgba(255, 255, 255, 0.10);
+    --bg-social-links-hover: rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url(/assets/moon-stars.svg);
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(/assets/bg-mobile-light.jpg);
+    --border-color: rgba(0, 0, 0, 0.50);
+    --bg-stroke-color: rgba(0, 0, 0, 0.05);
+    --bg-stroke-color-hover: rgba(0, 0, 0, 0.02);
+    --bg-social-links-hover: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(/assets/sun.svg);
+}
+
+body {
+    /*  BACKGROUND  */
+    /* background-image: url(/assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover; */
+
+    /*background: color image repeat position/cover */
+    background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+
+/* //////////////////// Container //////////////////////////// */
+
+
+#container {
+    /* border: 1px solid red; */
+    width: 360px;
+    margin: 56px auto;
+    padding: 0 24px;
+}
+
+
+/* ///////////////////////// Profile ///////////////////// */
+
+
+#profile {
+    text-align: center;
+    padding: 24px;
+    /* border: 1px solid red; */
+}
+
+#profile img {
+    width: 112px;
+}
+
+#profile p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+
+/* /////////////////////// Switch /////////////////////////// */
+#switch {
+    margin: 4px auto;
+    width: 64px;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+
+
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    border: 0;
+
+
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    position: absolute;
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+
+
+
+#switch span {
+    display: block;
+    /* border: 1px solid red; */
+    width: 64px;
+    height: 24px;
+    border-radius: 9999px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-stroke-color);
+}
+
+
+/*///////////////////////// Links //////////////////////////*/
+
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    text-decoration: none;
+    font-weight: 500;
+
+
+    background: var(--bg-stroke-color);
+    border: 1.0px solid var(--border-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+
+    transition: background 0.7s;
+}
+
+ul li a:hover {
+    background: var(--bg-stroke-color-hover);
+    border: 1.5px solid var(--text-color)
+}
+
+
+/*///////////////////////// Social Links /////////////////////*/
+
+
+#social-links {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    font-size: 24px;
+    padding: 24px 0;
+}
+
+#social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 50%;
+
+
+    transition: background 0.7s;
+}
+
+#social-links a:hover {
+    background: var(--bg-social-links-hover);
+}
+
+
+/* //////////////////////////footer///////////////////// */
+
+
+footer {
+    /* border: 1px solid red; */
+    padding: 24px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+}
